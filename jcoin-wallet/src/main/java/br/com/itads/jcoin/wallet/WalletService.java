@@ -1,4 +1,4 @@
-package br.com.itads.jcoin.blockchain;
+package br.com.itads.jcoin.wallet;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -10,13 +10,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import br.com.itads.jcoin.common.BlockChain;
+import br.com.itads.jcoin.common.Transaction;
+import br.com.itads.jcoin.common.TransactionInput;
+import br.com.itads.jcoin.common.TransactionOutput;
+
 /**
  * 
  * @author marioromeu
  * @email mario.romeu@gmail.com
  *
  */
-public class Wallet {
+public class WalletService {
 
 	/**
 	 * 
@@ -36,7 +41,7 @@ public class Wallet {
 	/**
 	 * 
 	 */
-	public Wallet() {
+	public WalletService() {
 		// TODO Auto-generated constructor stub
 		generateKeyPair();	
 	}
@@ -80,7 +85,7 @@ public class Wallet {
 		
 		float total = 0;
 		
-		for (Map.Entry<String, TransactionOutput> item: NoobChain.UTXOs.entrySet()){
+		for (Map.Entry<String, TransactionOutput> item: BlockChain.UTXOs.entrySet()){
 			TransactionOutput UTXO = item.getValue();
 			if(UTXO.isMine(publicKey)) { //if output belongs to me ( if coins belong to me )
 				UTXOs.put(UTXO.id,UTXO); //add it to our list of unspent transactions.

@@ -9,19 +9,14 @@
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>2.5.12</version>
-	<relativePath />
+	<relativePath></relativePath>
   </parent>
 
   <groupId>br.com.itads.jcoin</groupId>
-
   <artifactId>project</artifactId>
-
-  <version>0.0.1-SNAPSHOT</version>
-
+  <version>0.0.1</version>
   <packaging>pom</packaging>
-
   <name>ctr-smart-sim-project</name>
-
   <description>Projeto Base do Smart-SIM</description>
 
 
@@ -57,12 +52,11 @@
   </properties>
 
   <modules>
-  	<module>jcoin-common</module>
-  	<module>jcoin-wallet</module>
-  	<module>jcoin-node</module>
-  	<module>jcoin-miner</module>
-  	<module>br.com.itads.discover</module>
   	<module>discover</module>
+  	<module>jcoin-common</module>
+  	<module>jcoin-node</module>  	  	
+  	<module>jcoin-miner</module>
+  	<module>jcoin-wallet</module>  	
   </modules>
 
 
@@ -106,7 +100,7 @@
 	  	<groupId>org.apache.maven.plugins</groupId>
 	  	<artifactId>maven-resources-plugin</artifactId>
 	  	<!-- nao tira isso daqui pelo amor de deus -->
-	  	<version>3.1.0</version>
+	  	<!--version>3.1.0</version-->
 	  	<!-- foda-se que ta amarelo -->
 	  </plugin>
 	

@@ -4,7 +4,7 @@
   <parent>
 	<groupId>br.com.itads.jcoin</groupId>
 	<artifactId>project</artifactId>
-	<version>${jcoin-project-version}</version>
+	<version>0.0.1</version>
   </parent>
 
   <artifactId>jcoin-node</artifactId>
@@ -13,7 +13,7 @@
 	<dependency>
 	  <groupId>br.com.itads.jcoin</groupId>
 	  <artifactId>jcoin-common</artifactId>
-	  <version>${jcoin-common-version}}</version>
+	  <version>${jcoin-common-version}</version>
 	  <scope>compile</scope>
     </dependency>
   </dependencies>  

@@ -2,6 +2,8 @@ package br.com.itads.jcoin.common;
 
 import java.security.PublicKey;
 
+import br.com.itads.jcoin.util.StringUtil;
+
 /**
  * 
  * @author mario.romeu@gmail.com * @email mario.romeu@gmail.com

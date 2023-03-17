@@ -8,6 +8,8 @@ import java.security.Signature;
 import java.util.ArrayList;
 import java.util.Base64;
 
+import br.com.itads.jcoin.common.Transaction;
+
 /**
  * 
  * @author marioromeu

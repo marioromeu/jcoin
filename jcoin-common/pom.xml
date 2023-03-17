@@ -4,8 +4,27 @@
   <parent>
 	<groupId>br.com.itads.jcoin</groupId>
 	<artifactId>project</artifactId>
-	<version>${jcoin-project-version}</version>
+	<version>0.0.1</version>
   </parent>
-  
+
   <artifactId>jcoin-common</artifactId>
+  <version>${discover-version}</version>
+
+  <dependencies>
+
+	<!--  https://mvnrepository.com/artifact/com.google.code.gson/gson  -->
+	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>		
+	</dependency>
+
+	<!--  https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on  -->
+	<dependency>
+		<groupId>org.bouncycastle</groupId>
+		<artifactId>bcprov-jdk15on</artifactId>
+		<version>1.69</version>
+	</dependency>
+
+  </dependencies>
+  
 </project>

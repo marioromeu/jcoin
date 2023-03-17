@@ -124,13 +124,13 @@ public class Transaction {
 		 * gather transaction inputs (Make sure they are unspent):
 		 */
 		for(TransactionInput i : inputs) {
-			i.UTXO = NoobChain.UTXOs.get(i.transactionOutputId);
+			i.UTXO = BlockChain.UTXOs.get(i.transactionOutputId);
 		}
 
 		/**
 		 * check if transaction is valid:
 		 */
-		if(getInputsValue() < NoobChain.minimumTransaction) {
+		if(getInputsValue() < BlockChain.minimumTransaction) {
 			System.out.println("#Transaction Inputs to small: " + getInputsValue());
 			return false;
 		}
@@ -147,7 +147,7 @@ public class Transaction {
 		 * add outputs to Unspent list
 		 */
 		for(TransactionOutput o : outputs) {
-			NoobChain.UTXOs.put(o.id , o);
+			BlockChain.UTXOs.put(o.id , o);
 		}
 
 		/**
@@ -155,7 +155,7 @@ public class Transaction {
 		 */
 		for(TransactionInput i : inputs) {
 			if(i.UTXO == null) continue; //if Transaction can't be found skip it 
-			NoobChain.UTXOs.remove(i.UTXO.id);
+			BlockChain.UTXOs.remove(i.UTXO.id);
 		}
 
 		return true;

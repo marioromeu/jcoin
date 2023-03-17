@@ -3,6 +3,9 @@ package br.com.itads.jcoin.node;
 import java.util.ArrayList;
 import java.util.Date;
 
+import br.com.itads.jcoin.common.Transaction;
+import br.com.itads.jcoin.util.StringUtil;
+
 /**
  * 
  * @author marioromeu

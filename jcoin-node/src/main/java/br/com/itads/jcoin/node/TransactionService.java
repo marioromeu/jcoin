@@ -4,6 +4,8 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.ArrayList;
 
+import br.com.itads.jcoin.util.StringUtil;
+
 /**
  * 
  * @author marioromeu
@@ -122,13 +124,13 @@ public class TransactionService {
 		 * gather transaction inputs (Make sure they are unspent):
 		 */
 		for(TransactionInputService i : inputs) {
-			i.UTXO = BlockChain.UTXOs.get(i.transactionOutputId);
+			i.UTXO = BlockChainService.UTXOs.get(i.transactionOutputId);
 		}
 
 		/**
 		 * check if transaction is valid:
 		 */
-		if(getInputsValue() < BlockChain.minimumTransaction) {
+		if(getInputsValue() < BlockChainService.minimumTransaction) {
 			System.out.println("#Transaction Inputs to small: " + getInputsValue());
 			return false;
 		}
@@ -145,7 +147,7 @@ public class TransactionService {
 		 * add outputs to Unspent list
 		 */
 		for(TransactionOutputService o : outputs) {
-			BlockChain.UTXOs.put(o.id , o);
+			BlockChainService.UTXOs.put(o.id , o);
 		}
 
 		/**
@@ -153,7 +155,7 @@ public class TransactionService {
 		 */
 		for(TransactionInputService i : inputs) {
 			if(i.UTXO == null) continue; //if Transaction can't be found skip it 
-			BlockChain.UTXOs.remove(i.UTXO.id);
+			BlockChainService.UTXOs.remove(i.UTXO.id);
 		}
 
 		return true;
