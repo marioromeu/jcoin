@@ -1,4 +1,4 @@
-package br.com.itads.jcoin.node;
+package br.com.itads.jcoin.node.service;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;
