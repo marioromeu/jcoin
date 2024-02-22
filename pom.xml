@@ -99,9 +99,6 @@
 	  <plugin>
 	  	<groupId>org.apache.maven.plugins</groupId>
 	  	<artifactId>maven-resources-plugin</artifactId>
-	  	<!-- nao tira isso daqui pelo amor de deus -->
-	  	<!--version>3.1.0</version-->
-	  	<!-- foda-se que ta amarelo -->
 	  </plugin>
 	
 	  <plugin>
