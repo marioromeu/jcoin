@@ -8,44 +8,32 @@
   <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.5.12</version>
+	<version>3.2.4</version>
 	<relativePath></relativePath>
   </parent>
 
   <groupId>br.com.itads.jcoin</groupId>
   <artifactId>project</artifactId>
   <version>0.0.1</version>
-  <packaging>pom</packaging>
-  <name>ctr-smart-sim-project</name>
-  <description>Projeto Base do Smart-SIM</description>
+  <packaging>pom</packaging>  
+  <description>Projeto Base do JCOIN</description>
 
 
   <properties>
 
 	<jcoin-project-version>master</jcoin-project-version>
 
-	<maven.compiler.source>1.8</maven.compiler.source>
-	<maven.compiler.target>1.8</maven.compiler.target>
+	<maven.compiler.source>17</maven.compiler.source>
+	<maven.compiler.target>17</maven.compiler.target>
 	
-	<jdk.version>1.8</jdk.version>
-	<java-version>1.8</java-version>
+	<jdk.version>17</jdk.version>
+	<java-version>17</java-version>
 
-	<spring-cloud-version>2020.0.5</spring-cloud-version>
-
-	<junit-jupiter-version>5.3.2</junit-jupiter-version>
-
-	<spring-fox-version>2.9.2</spring-fox-version>
-
-	<swagger-version>1.6.4</swagger-version>
-	<swagger-v3-version>2.1.12</swagger-v3-version>
-
-	<log4j2.version>2.17.1</log4j2.version>
-	<jjwt-version>0.9.1</jjwt-version>	
+	<spring-cloud.version>2023.0.0</spring-cloud.version>
 
 	<jcoin-common-version> 0.0.1-${jcoin-project-version} </jcoin-common-version>
 	<jcoin-wallet-version> 0.0.1-${jcoin-project-version} </jcoin-wallet-version>
 	<jcoin-node-version>   0.0.1-${jcoin-project-version} </jcoin-node-version>
-	<jcoin-miner-version>  0.0.1-${jcoin-project-version} </jcoin-miner-version>
 	<discover-version>     0.0.1-${jcoin-project-version} </discover-version>
 	
 
@@ -55,42 +43,8 @@
   	<module>discover</module>
   	<module>jcoin-common</module>
   	<module>jcoin-node</module>  	  	
-  	<module>jcoin-miner</module>
   	<module>jcoin-wallet</module>  	
   </modules>
-
-
-  <dependencies>
-
-	<dependency>
-	  <groupId>commons-logging</groupId>
-	  <artifactId>commons-logging</artifactId>
-	  <version>1.2</version>
-	  <scope>compile</scope>
-    </dependency>
-
-	<dependency>
-	  <groupId>org.apache.zookeeper</groupId>
-	  <artifactId>zookeeper</artifactId>
-	  <version>3.5.6</version>
-	</dependency>
-
-  </dependencies>
-  
-  
-
-  <dependencyManagement>
-	<dependencies>
-	  <dependency>
-		<groupId>org.apache.logging.log4j</groupId>
-	    <artifactId>log4j-bom</artifactId>
-		<version>2.17.1</version>
-		<scope>import</scope>
-		<type>pom</type>
-	  </dependency>
-    </dependencies>
-  </dependencyManagement>
-
 
   <build>
 
@@ -117,7 +71,7 @@
 	    <groupId>org.apache.maven.plugins</groupId>
 	    <artifactId>maven-javadoc-plugin</artifactId>	
 	    <configuration>
-	  	  <source>8</source>
+	  	  <source>21</source>
 		  <doclint>none</doclint>
 	    </configuration>
 	  </plugin>

@@ -3,6 +3,9 @@ package br.com.itads.jcoin.node.service;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.springframework.stereotype.Service;
+
+import br.com.itads.jcoin.common.Block;
 import br.com.itads.jcoin.common.Transaction;
 import br.com.itads.jcoin.common.TransactionInput;
 import br.com.itads.jcoin.common.TransactionOutput;
@@ -14,12 +17,13 @@ import br.com.itads.jcoin.common.Wallet;
  * @email mario.romeu@gmail.com
  *
  */
+@Service
 public class BlockChainService {
 
 	/**
 	 * 
 	 */
-	public static ArrayList<BlockService> blockchain = new ArrayList<BlockService>();
+	public static ArrayList<Block> blockchain = new ArrayList<Block>();
 
 	/**
 	 * list of all unspent transactions.
@@ -55,17 +59,7 @@ public class BlockChainService {
 	 * 
 	 * @return
 	 */
-	public static Boolean isChainValid() {
-		
-		/**
-		 * 
-		 */
-		BlockService currentBlock;
-		
-		/**
-		 * 
-		 */
-		BlockService previousBlock;
+	public Boolean isChainValid(Block currentBlock, Block previousBlock) {
 		
 		/**
 		 * 
@@ -159,7 +153,7 @@ public class BlockChainService {
 	 * 
 	 * @param newBlock
 	 */
-	public static void addBlock(BlockService newBlock) {
+	public void addBlock(Block newBlock) {
 		newBlock.mineBlock(difficulty);
 		blockchain.add(newBlock);
 	}

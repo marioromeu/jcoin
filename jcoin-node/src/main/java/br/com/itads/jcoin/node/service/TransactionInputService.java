@@ -1,11 +1,14 @@
 package br.com.itads.jcoin.node.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * 
  * @author mario.romeu@gmail.com * @email mario.romeu@gmail.com
  * @email mario.romeu@gmail.com
  *
  */
+@Service
 public class TransactionInputService {
 	
 	/**

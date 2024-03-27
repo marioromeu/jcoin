@@ -18,6 +18,8 @@ import java.util.Map;
  */
 public class Wallet {
 
+	private BlockChain blockChain;
+	
 	/**
 	 * 
 	 */
@@ -36,8 +38,19 @@ public class Wallet {
 	/**
 	 * 
 	 */
-	public Wallet() {
-		// TODO Auto-generated constructor stub
+	public Wallet() {		
+		generateKeyPair();	
+	}
+	
+	public void linkBlockChain(BlockChain blockChain) {
+		this.blockChain = blockChain;		
+	}
+	
+	/**
+	 * 
+	 */
+	public Wallet(BlockChain blockChain) {
+		this.blockChain = blockChain;
 		generateKeyPair();	
 	}
 
@@ -80,7 +93,7 @@ public class Wallet {
 		
 		float total = 0;
 		
-		for (Map.Entry<String, TransactionOutput> item: BlockChain.UTXOs.entrySet()){
+		for (Map.Entry<String, TransactionOutput> item: blockChain.getUTXOs().entrySet()){
 			TransactionOutput UTXO = item.getValue();
 			if(UTXO.isMine(publicKey)) { //if output belongs to me ( if coins belong to me )
 				UTXOs.put(UTXO.id,UTXO); //add it to our list of unspent transactions.

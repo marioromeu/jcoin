@@ -4,6 +4,8 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Service;
+
 import br.com.itads.jcoin.util.StringUtil;
 
 /**
@@ -12,6 +14,7 @@ import br.com.itads.jcoin.util.StringUtil;
  * @email mario.romeu@gmail.com
  *
  */
+@Service
 public class TransactionService {
 
 	/**

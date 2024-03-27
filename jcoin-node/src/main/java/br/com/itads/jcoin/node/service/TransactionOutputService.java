@@ -2,6 +2,8 @@ package br.com.itads.jcoin.node.service;
 
 import java.security.PublicKey;
 
+import org.springframework.stereotype.Service;
+
 import br.com.itads.jcoin.util.StringUtil;
 
 /**
@@ -10,6 +12,7 @@ import br.com.itads.jcoin.util.StringUtil;
  * @email mario.romeu@gmail.com
  *
  */
+@Service
 public class TransactionOutputService {
 	
 	/**

@@ -3,6 +3,8 @@ package br.com.itads.jcoin.node.service;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.springframework.stereotype.Service;
+
 import br.com.itads.jcoin.common.Transaction;
 import br.com.itads.jcoin.util.StringUtil;
 
@@ -12,6 +14,7 @@ import br.com.itads.jcoin.util.StringUtil;
  * @email mario.romeu@gmail.com
  *
  */
+@Service
 public class BlockService {
 
   /**
